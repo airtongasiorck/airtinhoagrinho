@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castanha-do-Pará | A Colheita da Floresta</title>
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --accent: #FF9800;
+            --dark: #1B3A1E;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #F5F5F5;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1600x900/?amazon-rainforest') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 152, 0, 0.5);
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--dark);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .processo {
+            background: #E8F5E9;
+        }
+        
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: var(--accent);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .highlight {
+            background: #FFF8E1;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            border-left: 8px solid var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🌳 Castanha do Pará</div>
+            <div class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#colheita">Colheita</a>
+                <a href="#importancia">Importância</a>
+                <a href="#sustentabilidade">Sustentabilidade</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>Exploração da Colheita da Castanha-do-Pará</h1>
+            <p class="subtitle">Um tesouro da Amazônia que sustenta comunidades e preserva a floresta</p>
+            <a href="#colheita" class="btn">Conheça o processo</a>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <h2 class="section-title">O que é a Castanha-do-Pará?</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://source.unsplash.com/random/600x400/?brazil-nut" alt="Castanha-do-Pará">
+                <div class="card-content">
+                    <h3>Origem</h3>
+                    <p>A castanha-do-pará (Bertholletia excelsa) é uma semente proveniente de uma das maiores árvores da floresta amazônica, podendo atingir até 50 metros de altura. É nativa da região amazônica do Brasil, Bolívia e Peru.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/600x400/?amazon-nut" alt="Árvore">
+                <div class="card-content">
+                    <h3>Características</h3>
+                    <p>Cada ouriço (fruto) pode pesar até 2,5 kg e contém de 10 a 25 castanhas. A colheita é feita de forma extrativista, respeitando o ciclo natural da árvore.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/random/600x400/?amazon-community" alt="Comunidade">
+                <div class="card-content">
+                    <h3>Importância Cultural</h3>
+                    <p>É fonte de renda para milhares de famílias ribeirinhas e indígenas na Amazônia. A atividade é predominantemente feita por extrativistas tradicionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="colheita" class="processo">
+        <h2 class="section-title">O Processo de Colheita</h2>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Queda Natural</h3>
+                    <p>Entre os meses de janeiro e junho, os ouriços maduros caem naturalmente do alto das árvores. Os extrativistas nunca sobem nas árvores para colher.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Coleta</h3>
+                    <p>Os ouriços são coletados manualmente no chão da floresta. Esta é uma atividade perigosa devido à possibilidade de ouriços caírem enquanto a pessoa está por perto.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>Abertura</h3>
+                    <p>Os ouriços são abertos com machado ou facão para retirar as castanhas. Este trabalho é feito geralmente nas próprias comunidades.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                    <h3>Secagem e Seleção</h3>
+                    <p>As castanhas são secadas ao sol e selecionadas por qualidade antes de serem comercializadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="importancia">
+        <div class="highlight">
+            <h2 style="text-align: center; margin-bottom: 25px;">Por que a castanha-do-pará é tão valiosa?</h2>
+            <ul style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                <li><strong>Nutrição:</strong> Rica em selênio (um dos alimentos mais ricos do mundo), proteínas, fibras, vitamina E e magnésio.</li>
+                <li><strong>Economia:</strong> Gera renda direta para mais de 70 mil famílias na Amazônia brasileira.</li>
+                <li><strong>Biodiversidade:</strong> A preservação da castanheira ajuda na manutenção da floresta em pé.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sustentabilidade">
+        <h2 class="section-title">Sustentabilidade e Desafios</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>🌱 Práticas Sustentáveis</h3>
+                    <p>A colheita da castanha é considerada um dos melhores exemplos de extrativismo sustentável. A árvore continua viva e produz por mais de 200 anos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>⚠️ Desafios</h3>
+                    <p>Preços voláteis, concorrência com castanhas cultivadas, mudanças climáticas e pressão do desmatamento são os principais desafios enfrentados pelos extrativistas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>📈 O Futuro</h3>
+                    <p>Certificações de origem e comércio justo têm ajudado a valorizar o produto e melhorar a renda das comunidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Castanha-do-Pará:</strong> Patrimônio da Amazônia Brasileira</p>
+        <p style="margin-top: 15px; opacity: 0.8;">Preservar a floresta é preservar nosso futuro</p>
+        <p style="margin-top: 30px; font-size: 0.9rem;">Página criada com ❤️ para valorizar o trabalho dos extrativistas amazônicos</p>
+    </footer>
+</body>
+</html>
